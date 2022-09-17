@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Speedy Typing Monster</title>
+
+    <!-------------------------------------------------
+        this is the tailwind css daisiUilink connection
+    ------------------------------------------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.28.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!------------------------------------------------
+         other lInks 
+    ----------------------------------------------------->
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,10 +27,53 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <section>
-      <img id="image-container" src="image/img-1.jfif" alt="" />
-    </section>
-    <script src="index.js"></script>
+  <body
+    class="bg-[url('./image/bg.png')] bg-hero bg-no-repeat bg-cover bg-center bg-fixed text-white"
+  >
+    <!-- <section class="w-9/12 mx-auto mt-8">
+      <img
+        id="image-container"
+        src="image/img-1.jfif"
+        class="rounded-lg w-full"
+        alt=""
+      />
+    </section> -->
+    <header></header>
+    <main>
+      <section>
+        <div class="flex items-center justify-center">
+          <a href=""><img src="./image/logo.png" alt="" /></a>
+        </div>
+        <div class="mt-4 text-center">
+          <span id="show-time" class="text-2xl"> 0 </span>
+        </div>
+      </section>
+      <section class="w-9/12 mx-auto first-letter:">
+        <div
+          class="box-container flex flex-col gap-4 items-center justify-center"
+        >
+          <div id="question"></div>
+
+          <div id="display" class="inactive"></div>
+
+          <div class="buttons">
+            <button class="btn btn-primary" id="starts">START</button>
+          </div>
+
+          <div class="divider-container">
+            <div class="line"></div>
+            <h1 class="title2">History</h1>
+            <div class="line"></div>
+          </div>
+          <div id="histories"></div>
+        </div>
+        <div id="countdown"></div>
+        <div id="modal-background" class="hidden"></div>
+        <div id="result" class="hidden"></div>
+      </section>
+    </main>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/history.js"></script>
   </body>
 </html>
